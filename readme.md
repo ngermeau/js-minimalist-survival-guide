@@ -204,6 +204,7 @@ Objects are collection of properties.
 ```js 
 let motorcycle = {                              // creating an object
     brand: "Triumph",                           // property pointing to primitive value 
+    "model": "daytona",                         // same as above, no difference by using "" 
     startEngine() {},                           // property pointing to function object value
     engine: {                                   // property pointing to object value 
         cylinder: 3 
