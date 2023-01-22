@@ -521,46 +521,30 @@ try {
 }
 ```
 
-### Using async and await  
-Used to write much more cleaner async handling 
-
-```js
-## Modules
-Splitting javascript program into smaller chunks(modules) which can be imported when needed
-
+### Modules 
 ```js
 
-// Named Exports 
+// Export/Import Default (only one per module)
+export default function talk() {}                   // export default value during declaration 
+export default talk                                 // export default value after declaration 
+import sayHello from './util.mjs'                   // import default value as sayHello
+
+// Export/Import Named 
 export function jump() {}                       // export a value during declaration
 export { jump }                                 // export a value after declaration     
-export { jump as jumpAround }                   // export and rename
+export { jump as jumpAround }                   // rename and export 
+import { jump } from "./util.mjs"               // import value 
+import { jump as jumpAround } from "./util.mjs" // import value and rename 
 
-// Default Export (only one per module)
-export default function talk() {}               // export default value during declaration 
-export default sayHello                         // export default value after declaration 
+import * as Util from './util.mjs'              // import all export from modules into namespace 
 
 // Aggregating Exports                          // aggregate submodules in one 
 export { Arms } from './arms.mjs'               // export one submodule value only
 export * as Head from './head.mjs'              // export all submodule values under specific namespace 
 ```
 
-
-```js
-// Named imports
-import { jump } from "./util.mjs"               // import value 
-import { jump as jumpAround } from "./util.mjs" // import value and rename 
-
-// Default Imports
-import { default as hello } from './util.mjs'   // import default value 
-import hello from './util.mjs'                  // same as above but shorter  
-
-// Using namespace to avoid conflicting names   
-import * as Util from './util.mjs'              // import all export from modules into namespace 
-import { Arms,Head } from './util.mjs'          // import specific submodules 
-```
-
-
 ## Async calls  
+http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
 Asynchronous calls returns to the caller immediately before the completion of its processing
 
 **A word of explanation about setTimeout before** 
