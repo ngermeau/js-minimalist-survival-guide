@@ -326,8 +326,14 @@ sayHi.description = "desc"                      // add a property variable to a 
 sayHi.sayHello = function() { return "hi" }     // add another function to the function
 
 // anonymous function
-let fn = (function(){ return (a + b) })         // creation of anonymous function
-let fn = () => a + b                            // shorthand creation version using => (no {} bracket and last statement value is returned)
+let fn = (function(number){ return (number * 2) })     // creation of anonymous function
+let fn = (number) => { return number * 2}              // shorter version 
+let fn = number => { return number * 2}                // shorter version (remove parenthesis if only one parameter)
+let fn = number => number * 2                          // shorter version (implicit return if only one expression)
+let fn = number => (                                   // implicit return if expression span on mulitple lines
+  number* 
+  number 
+)
 ```
 
 ### Understand Javascript Prototype (constructor, prototype, proto)
