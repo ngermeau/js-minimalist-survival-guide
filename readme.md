@@ -183,7 +183,7 @@ undefined                                       // undefined
 Symbol("id")                                    // symbol
 ```
 
-### When you assign a primitive value to a variable, the variable directly holds that value in memory.  
+#### When you assign a primitive value to a variable, the variable directly holds that value in memory.  
 
 ```js 
 let counter = 8                                 // var containing primitive value 8
@@ -212,7 +212,7 @@ let motorcycle = {                              // creating an object
 }
 ```
 
-### Creation of objects always creates a brand new different value ! 
+### When you assign an object to a variable, the variables hold references to the memory location where the object is stored (a pointer).
 
 ```js 
 let paris = {}                                  // creating a new object 
