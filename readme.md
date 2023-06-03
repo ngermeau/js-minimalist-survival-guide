@@ -189,6 +189,7 @@ Symbol("id")                                    // symbol
 let counter = 8                                 // var containing primitive value 8
 let size = 8                                    // same as above 
 let isFile = true                               // var containing the primitive value false
+let message = "hello"                           // var containing the primitive value "hello"
 let height, person                              // both variables contains value undefined
 ```
 
