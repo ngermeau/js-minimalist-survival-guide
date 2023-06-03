@@ -183,14 +183,13 @@ undefined                                       // undefined
 Symbol("id")                                    // symbol
 ```
 
-### There is only one immutable single value in memory for every possible primitive value ! 
+### When you assign a primitive value to a variable, the variable directly holds that value in memory.  
 
 ```js 
-let counter = 8                                 // var pointing to the 8 primitive value 
+let counter = 8                                 // var containing primitive value 8
 let size = 8                                    // same as above 
-let message = "hello"                           // var pointing to the "hello" primitive value
-let notification = "hello"                      // same as above 
-let height, person                              // both points to undefined
+let isFile = true                               // var containing the primitive value false
+let height, person                              // both variables contains value undefined
 ```
 
 ![primitive](./img/primitive.png)
