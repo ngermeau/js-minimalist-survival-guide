@@ -1,4 +1,4 @@
-# Minimalist Javascript Reference
+# Javascript Minimalist Survival Guide
 
  * [Generic consideration](#generic-consideration)
  * [Comments](#comments)
